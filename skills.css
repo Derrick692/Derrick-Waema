@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+  --cyan: #4acfee;
+  --mint: #53f8c9;
+  --violet: #6070fd;
+  --ink: #0a0e16;
+  --panel: #4ad0ee1a;
+  --text: #eaf2f6;
+  --text-dim: #a9b7c4;
+  --font-display: "Space Grotesk", "Arial", sans-serif;
+  --font-body: "Inter", "Helvetica", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--ink);
+  font-family: var(--font-body);
+  color: var(--text);
+}
+.back-video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.main-section{
+  width: min(100%, 1200px);
+  margin: 24px auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem) 3rem;
+  background-color: var(--panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid #ffffff14;
+  border-radius: 32px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0.5rem 24px;
+}
+.logo h4{
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+
+}
+.nav-links a{
+  position: relative;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  transition: 0.3s;
+  transition: color 0.35s ease;
+}
+.nav-links a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--cyan);
+  transition: width 0.25s ease;
+}
+.nav-links a:hover{
+  color:var(--text);
+}
+.nav-links a:hover::after{
+  width: 100%;
+}
+.frontend-heading,
+.tools-heading,
+.currently-learning-heading,
+.build-heading{
+  margin-top: 35px;
+  display: block;
+  padding: 2rem 1.75rem 0rem;
+  text-align: center;
+}
+.frontend-heading h2,
+.tools-heading h2,
+.currently-learning-heading h2,
+.build-heading h2{
+  font-size: 25px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin: 0 20px;
+
+  color: var(--text);
+  background: linear-gradient(to right, var(--cyan), white, var(--mint), var(--cyan));
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 3s ease infinite;
+}
+@keyframes animate-gradient{
+  to{
+    background-position: 200%;
+  }
+}
+.frontend-pack,
+.tools-pack,
+.currently-learning{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 60px 20px 50px;
+  
+}
+
+
+.skill,
+.skill2,
+.skill3{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 130px;
+  flex: 0 0 130px;  
+}
+.skill:nth-child(2n){
+  transform: translateY(-30px);
+}
+.skill:nth-child(2n+1){
+  transform: translateY(30px);
+}
+.skill2:nth-child(2n){
+  transform: translateY(30px);
+}
+.skill2:nth-child(2n+1){
+  transform: translateY(-30px);
+}
+.skill i,
+.skill2 i,
+.skill3 i{
+  
+  font-size: 26px;
+  color: var(--cyan);
+  background: transparent;
+  
+  transition: 0.2s ease;
+}
+.skill i:hover{
+  transform: scale(1.08) rotate(6deg);
+  color: var(--mint);
+  border-color: var(--mint);
+}
+.skill p{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-align: center;
+  white-space: normal;
+} 
+.hexagon{
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: var(--cyan);
+  transition: 0.2s ease;
+}
+.inner-hexagon{
+  height: 62px;
+  width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: inherit;
+  background: var(--ink);
+}
+.hexagon:hover{
+background: var(--mint);
+}
+.my-kind{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 60px 20px 50px;
+  
+}
+.kind{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+.kind i{
+  
+  font-size: 26px;
+  color: var(--cyan);
+  background: transparent;
+
+}
+
+.kind p{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-align: center;
+  white-space: normal;
+} 
