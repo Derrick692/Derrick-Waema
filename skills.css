@@ -234,3 +234,247 @@ background: var(--mint);
   text-align: center;
   white-space: normal;
 } 
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 780px){
+
+  body{
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  nav{
+    padding: 18px 20px;
+  }
+
+  .logo h4{
+    font-size: 21px;
+  }
+
+  .nav-links{
+    gap: 18px;
+  }
+
+  .nav-links a{
+    font-size: 13px;
+  }
+
+
+  /* Main container */
+  .main-section{
+    width: calc(100% - 20px);
+    margin: 15px auto;
+    padding: 0 18px 2rem;
+    border-radius: 22px;
+    box-shadow: 0 0 18px #4acfee55;
+  }
+
+
+  /* Section headings */
+  .frontend-heading,
+  .tools-heading,
+  .currently-learning-heading,
+  .build-heading{
+    margin-top: 20px;
+    padding: 2rem 0 0;
+  }
+
+  .frontend-heading h2,
+  .tools-heading h2,
+  .currently-learning-heading h2,
+  .build-heading h2{
+    font-size: 22px;
+    margin: 0;
+  }
+
+
+  /* Skill groups */
+  .frontend-pack,
+  .tools-pack,
+  .currently-learning{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 10px;
+    padding: 45px 0 35px;
+  }
+
+
+  /* Individual skills */
+  .skill,
+  .skill2,
+  .skill3{
+    width: 100%;
+    flex: none;
+    gap: 9px;
+  }
+
+
+  /* Keep the staggered effect, but make it smaller */
+  .skill:nth-child(2n){
+    transform: translateY(-15px);
+  }
+
+  .skill:nth-child(2n+1){
+    transform: translateY(15px);
+  }
+
+  .skill2:nth-child(2n){
+    transform: translateY(15px);
+  }
+
+  .skill2:nth-child(2n+1){
+    transform: translateY(-15px);
+  }
+
+
+  /* Hexagons */
+  .hexagon{
+    width: 58px;
+    height: 58px;
+  }
+
+  .inner-hexagon{
+    width: 53px;
+    height: 53px;
+  }
+
+  .skill i,
+  .skill2 i,
+  .skill3 i{
+    font-size: 22px;
+  }
+
+
+  /* Skill names */
+  .skill p{
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+
+  /* What I Build */
+  .my-kind{
+    gap: 22px;
+    padding: 40px 0 35px;
+    width: 100%;
+  }
+
+  .kind{
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 12px 18px;
+    border: 1px solid #ffffff14;
+    border-radius: 12px;
+    background: #ffffff08;
+  }
+
+  .kind i{
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .kind span{
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+
+  /* Footer */
+  .footer{
+    padding-top: 10px;
+  }
+
+  .footer p{
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 420px){
+
+  nav{
+    padding: 16px 15px;
+  }
+
+  .logo h4{
+    font-size: 20px;
+  }
+
+  .nav-links{
+    gap: 13px;
+  }
+
+  .nav-links a{
+    font-size: 12px;
+  }
+
+  .main-section{
+    width: calc(100% - 14px);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+  }
+
+
+  /* Slightly smaller skill layout */
+  .frontend-pack,
+  .tools-pack,
+  .currently-learning{
+    gap: 22px 5px;
+    padding-top: 40px;
+  }
+
+  .hexagon{
+    width: 54px;
+    height: 54px;
+  }
+
+  .inner-hexagon{
+    width: 49px;
+    height: 49px;
+  }
+
+  .skill i,
+  .skill2 i,
+  .skill3 i{
+    font-size: 20px;
+  }
+
+  .skill p{
+    font-size: 10px;
+  }
+
+
+  .frontend-heading h2,
+  .tools-heading h2,
+  .currently-learning-heading h2,
+  .build-heading h2{
+    font-size: 21px;
+  }
+
+
+  .my-kind{
+    gap: 16px;
+  }
+
+  .kind{
+    padding: 11px 14px;
+  }
+
+  .kind span{
+    font-size: 12px;
+  }
+}

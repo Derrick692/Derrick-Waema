@@ -385,42 +385,302 @@ nav{
 }
 
 
+@media (max-width: 780px){
+
+  body{
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  nav{
+    padding: 18px 20px;
+  }
+
+  .logo h4{
+    font-size: 21px;
+  }
+
+  .nav-links{
+    gap: 18px;
+  }
+
+  .nav-links a{
+    font-size: 13px;
+  }
+
+  .main-section{
+    width: calc(100% - 20px);
+    margin: 68px auto 15px;
+    padding: 0 18px 2rem;
+    border-radius: 22px;
+    box-shadow: 0 0 18px #4acfee55;
+  }
 
 
+  .hero{
+    flex-direction: column;
+    gap: 30px;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-text{
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero h4{
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .hero h5{
+    font-size: 16px;
+    margin-bottom: 17px;
+  }
+
+  .hero p{
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  /* Don't force the typing text to stay on one line */
+  .hero span{
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .line-1,
+  .line-2{
+    width: 100%;
+    animation: none;
+  }
+
+  .line-2{
+    margin-top: 3px;
+  }
 
 
+  /* Button + social icons */
+  .social-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn{
+    padding: 12px 20px;
+    margin-right: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .social-icon{
+    width: 38px;
+    height: 38px;
+    margin: 0 2px;
+    padding: 7px;
+    font-size: 15px;
+  }
 
 
+  /* Hero image */
+  .hero-image{
+    width: 100%;
+    height: 360px;
+    flex: none;
+    border-radius: 20px;
+  }
 
-
-
-
-
-
-
-
-
-
-@media(max-aspect-ratio: 16/9){
-  .back-video{
-    width: auto;
+  .hero-image-frame{
     height: 100%;
+    border-radius: 20px;
   }
-}
-@media(min-aspect-ratio: 16/9){
-  .back-video{
+
+  .hero-image-frame img{
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-image::before{
+    inset: -5%;
+  }
+
+  .hero-badge{
+    left: 12px;
+    bottom: 12px;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+
+  /* Sections */
+  .about,
+  .projects,
+  .contact{
     width: 100%;
-    height: auto;
+    max-width: 100%;
+    padding: 2.2rem 0 0;
+  }
+
+  .about h2,
+  .projects h2,
+  .contact h2{
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .about p,
+  .contact > p{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* Projects */
+  .project-list{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .project-card{
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .project-card img{
+    aspect-ratio: 16 / 10;
+    margin-bottom: 13px;
+    border-radius: 10px;
+  }
+
+  .project-card h3{
+    font-size: 17px;
+    margin-bottom: 7px;
+  }
+
+  .project-card p{
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .project-links{
+    gap: 18px;
+  }
+
+  .project-links a{
+    font-size: 13px;
+  }
+
+
+  /* Contact */
+  .contact-links{
+    gap: 18px;
+    margin-top: 18px;
+    padding-bottom: 2.2rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-links a{
+    font-size: 14px;
+  }
+
+
+  /* Footer */
+  .footer{
+    padding-bottom: 10px;
+  }
+
+  .footer p{
+    font-size: 11px;
+    text-align: center;
   }
 }
-@keyframes animate-gradient{
-  to{
-    background-position: 200%;
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 420px){
+
+  nav{
+    padding: 16px 15px;
   }
-}
-@keyframes typing{
-  to{
-    width: 100%;
-    
+
+  .nav-links{
+    gap: 13px;
+  }
+
+  .nav-links a{
+    font-size: 12px;
+  }
+
+  .logo h4{
+    font-size: 20px;
+  }
+
+  .main-section{
+    width: calc(100% - 14px);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+  }
+
+  .hero{
+    padding-top: 2rem;
+    gap: 25px;
+  }
+
+  .hero h4{
+    font-size: 16px;
+  }
+
+  .hero h5{
+    font-size: 14px;
+  }
+
+  .hero p{
+    font-size: 13px;
+  }
+
+  .social-icons{
+    gap: 6px;
+  }
+
+  .btn{
+    padding: 11px 16px;
+    font-size: 13px;
+  }
+
+  .social-icon{
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-image{
+    height: 300px;
+  }
+
+  .hero-badge{
+    font-size: 11px;
+  }
+
+  .about h2,
+  .projects h2,
+  .contact h2{
+    font-size: 22px;
   }
 }
