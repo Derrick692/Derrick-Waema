@@ -52,6 +52,8 @@ header{
   width: 100%;
   background: rgba(10,14,22,.75);
   backdrop-filter: blur(16px);
+  margin: 0 auto;
+  
 }
 nav{
   display: flex;

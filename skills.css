@@ -302,6 +302,11 @@ background: var(--mint);
     padding: 45px 0 35px;
   }
 
+  /* Frontend Pack only: two by two on phones */
+  .frontend-pack{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 
   /* Individual skills */
   .skill,
@@ -313,14 +318,13 @@ background: var(--mint);
   }
 
 
-  /* Keep the staggered effect, but make it smaller */
-  .skill:nth-child(2n){
-    transform: translateY(-15px);
+  /* Frontend Pack: no stagger on phones, so the 2x2 grid lines up */
+  .skill:nth-child(2n),
+  .skill:nth-child(2n+1){
+    transform: none;
   }
 
-  .skill:nth-child(2n+1){
-    transform: translateY(15px);
-  }
+  /* Keep the staggered effect for Tools, but make it smaller */
 
   .skill2:nth-child(2n){
     transform: translateY(15px);
